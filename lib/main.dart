@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/splash_screen.dart'; // ← ganti import home ke splash
 
 void main() {
   runApp(const BetawiApp());
@@ -16,9 +16,7 @@ class BetawiApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFD32F2F)),
         useMaterial3: true,
-        fontFamily: 'sans-serif',
       ),
-
       builder: (context, child) {
         return Center(
           child: ConstrainedBox(
@@ -27,7 +25,7 @@ class BetawiApp extends StatelessWidget {
           ),
         );
       },
-      home: const HomeScreen(),
+      home: const SplashScreen(), // ← mulai dari splash
     );
   }
 }
